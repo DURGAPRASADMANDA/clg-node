@@ -1,0 +1,9 @@
+{
+    "jwtSecret": "$pherem!",
+    "logUserExpireTime": 6,
+    "logUserExpireType": "hours",
+    "saltSize": 16,
+    "defaultSalt": "efe78622c971cb92",
+    "yes": "Y",
+    "no": "N"
+}

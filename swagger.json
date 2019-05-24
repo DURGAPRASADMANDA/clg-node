@@ -1,0 +1,2844 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Elevate Application APIs",
+        "description": "Elevate Application APIs",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "tags": [
+        {
+            "name": "Settings - Customer Management",
+            "description": "APIs for Customer management"
+        },
+        {
+            "name": "Settings - Driver Management",
+            "description": "APIs for Driver management"
+        },
+        {
+            "name": "Lists",
+            "description": "APIs to get lists"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/clients": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets clients list",
+                "description": "This API gets clients list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/addresstypes": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets address type list",
+                "description": "This API gets address type list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/states": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets states list",
+                "description": "This API gets states list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/zones": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets zones list",
+                "description": "This API gets zones list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/addressdata": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets address list",
+                "description": "This API gets address list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/persons": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets persons list",
+                "description": "This API gets Persons list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/contact": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets contact list ",
+                "description": "This API gets contact  list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manage/driver/address": {
+            "get": {
+                "tags": [
+                    "Settings - Driver Management"
+                ],
+                "summary": "This API gets driver address list",
+                "description": "This API gets ariver address list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manage/driver/unavailability": {
+            "get": {
+                "tags": [
+                    "Settings - Driver Management"
+                ],
+                "summary": "This API gets driver unavailability list",
+                "description": "This API gets driver unavailability list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manage/customer/address": {
+            "get": {
+                "tags": [
+                    "Settings - Customer Management"
+                ],
+                "summary": "This API gets customer address list",
+                "description": "This API gets customer address list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/orders": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets orders list",
+                "description": "This API gets Orders list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/weekdays": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets week days list",
+                "description": "This API gets week days list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/country/list": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets list",
+                "description": "This API gets list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/cities": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets cities list",
+                "description": "This API gets cities list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manage/customer": {
+            "get": {
+                "tags": [
+                    "Settings - Customer Management"
+                ],
+                "summary": "This API gets customers list",
+                "description": "This API gets customers list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manage/driver": {
+            "get": {
+                "tags": [
+                    "Settings - Driver Management"
+                ],
+                "summary": "This API gets drivers list",
+                "description": "This API gets drivers list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/business/hours": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets business hours list",
+                "description": "This API gets business hours list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/season": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets seasons list",
+                "description": "This API gets season list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manage/customer/person": {
+            "get": {
+                "tags": [
+                    "Settings - Customer Management"
+                ],
+                "summary": "This API gets customer person list",
+                "description": "This API gets customer person list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/commodity": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets commodity list",
+                "description": "This API gets commodity list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manage/driver/license": {
+            "get": {
+                "tags": [
+                    "Settings - Driver Management"
+                ],
+                "summary": "This API gets licence list",
+                "description": "This API gets licence list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/addressline": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets address line list",
+                "description": "This API gets address line list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/client/address": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets client address list",
+                "description": "This API gets client address list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/contact/type": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets contact type list",
+                "description": "This API gets contact type list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/equipment": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets equipment list",
+                "description": "This API gets equipment list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/equipment/type": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets equipment type list",
+                "description": "This API gets equipment type list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/equipment/commodity": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets equipment commodity list",
+                "description": "This API gets equipment commodity list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/equipment/unavailability": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets equipment unavailability list",
+                "description": "This API gets equipment unavailability list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/order/line": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets order line list",
+                "description": "This API gets order line list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manifests": {
+            "get": {
+                "tags": [
+                    "Lists"
+                ],
+                "summary": "This API gets manifests list",
+                "description": "This API gets manifests list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/manage/driver/equipment": {
+            "get": {
+                "tags": [
+                    "Settings - Driver Management"
+                ],
+                "summary": "This API gets equipment driver list",
+                "description": "This API gets equipment driver list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Please provide from",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Please provide size",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/plan/orders/{order_id}": {
+            "get": {
+                "tags": [
+                    "Unplanned Orders"
+                ],
+                "summary": "Get single unplanned order",
+                "description": "",
+                "operationId": "Get single unplanned order",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "order_id",
+                        "in": "path",
+                        "description": "Please provide order id",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Unplanned Orders"
+                ],
+                "summary": "Orders Edit",
+                "description": "Orders Edit",
+                "operationId": "Orders Edit",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "order_id",
+                        "in": "path",
+                        "description": "Please provide order id",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "Orders",
+                        "in": "body",
+                        "description": "Updating Orders data",
+                        "required": true,
+                        "type": "Object",
+                        "schema": {
+                            "$ref": "#/definitions/OrderData"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Unplanned Orders"
+                ],
+                "summary": "delete single order",
+                "description": "",
+                "operationId": "delete single order",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "order_id",
+                        "in": "path",
+                        "description": "Please provide order id",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/plan/manifests": {
+            "get": {
+                "tags": [
+                    "Manifest"
+                ],
+                "summary": "Get all manifests",
+                "description": "Get all manifests",
+                "operationId": "Manifest",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Manifest"
+                ],
+                "summary": "Creating empty Manifest",
+                "description": "Creating empty Manifest",
+                "operationId": "Manifest",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Manifest"
+                ],
+                "summary": "Adding orders to the manifest grid",
+                "description": "Adding orders to the manifest grid",
+                "operationId": "Manifest Summery",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "manifest_id",
+                        "in": "query",
+                        "description": "Please provide manifest id",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "Manifest",
+                        "in": "body",
+                        "description": "Adding manifest data",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ManifestSummery"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/plan/manifests/{manifest_id}": {
+            "get": {
+                "tags": [
+                    "Manifest"
+                ],
+                "summary": "Get single manifest data",
+                "description": "",
+                "operationId": "Get single manifest data",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "manifest_id",
+                        "in": "path",
+                        "description": "Please provide manifest id",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Manifest"
+                ],
+                "summary": "Manifest Edit",
+                "description": "Manifest Edit",
+                "operationId": "Manifest",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "manifest_id",
+                        "in": "path",
+                        "description": "Please provide manifest id",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "Manifest",
+                        "in": "body",
+                        "description": "Updating manifest data",
+                        "required": true,
+                        "type": "Object",
+                        "schema": {
+                            "$ref": "#/definitions/ManifestData"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/register": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "User Registration",
+                "description": "",
+                "operationId": "User Registration",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "User Registration",
+                        "in": "body",
+                        "description": "New User Registration",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/register"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/login": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "User Authentication",
+                "description": "",
+                "operationId": "User Login",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "User Login",
+                        "in": "body",
+                        "description": "User authentication route to get JWT bearer token for future API plays. Please use username/pasword as witte/witte to generate a token.",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/login"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/:userId": {
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "User Update",
+                "description": "",
+                "operationId": "User Update",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "User Update",
+                        "in": "body",
+                        "description": "User Update",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/update"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        },
+        " /api/user/delete/:userId": {
+            "delete": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "delete user",
+                "description": "",
+                "operationId": "delete user",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Please provide user Authorization",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "Please provide userId",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful  operation",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access is denied due to invalid credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    },
+                    "500": {
+                        "description": "An Unknown error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseObj"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ResponseObj": {
+            "type": "object",
+            "required": [
+                "status",
+                "message",
+                "response"
+            ],
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "result": {
+                    "type": "object"
+                }
+            }
+        },
+        "OrderData": {
+            "type": "object",
+            "required": [
+                "revenue",
+                "capacity_measure_quantity",
+                "appointment_TW_start",
+                "appointment_TW_end"
+            ],
+            "properties": {
+                "revenue": {
+                    "type": "string"
+                },
+                "capacity_measure_quantity": {
+                    "type": "string"
+                },
+                "appointment_TW_start": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "appointment_TW_end": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "ManifestSummery": {
+            "type": "object",
+            "required": [
+                "external_id",
+                "manifest_origin_location_id",
+                "manifest_destination_location_id",
+                "manifest_start",
+                "manifest_end",
+                "orders_count",
+                "manifest_miles",
+                "manifest_revenue",
+                "manifest_status",
+                "next_order_id",
+                "stops_count",
+                "completed_stops_count",
+                "pending_stops_count"
+            ],
+            "properties": {
+                "order_id": {
+                    "type": "integer"
+                },
+                "external_id": {
+                    "type": "string"
+                },
+                "load_type": {
+                    "type": "string"
+                },
+                "freight_type": {
+                    "type": "string"
+                },
+                "manifest_origin_location_id": {
+                    "type": "integer"
+                },
+                "manifest_destination_location_id": {
+                    "type": "integer"
+                },
+                "manifest_start": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "manifest_end": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "orders_count": {
+                    "type": "integer"
+                },
+                "manifest_miles": {
+                    "type": "string"
+                },
+                "manifest_revenue": {
+                    "type": "string"
+                },
+                "manifest_duration_minutes": {
+                    "type": "string"
+                },
+                "manifest_status": {
+                    "type": "string"
+                },
+                "next_order_id": {
+                    "type": "integer"
+                },
+                "stops_count": {
+                    "type": "integer"
+                },
+                "completed_stops_count": {
+                    "type": "integer"
+                },
+                "pending_stops_count": {
+                    "type": "integer"
+                },
+                "manifest_createdby": {
+                    "type": "string"
+                },
+                "manifest_summary_type": {
+                    "type": "string"
+                }
+            }
+        },
+        "ManifestData": {
+            "type": "object",
+            "required": [
+                "revenue_rate",
+                "capacity_measure_quantity",
+                "appointment_TW_start",
+                "appointment_TW_end"
+            ],
+            "properties": {
+                "revenue_rate": {
+                    "type": "string"
+                },
+                "capacity_measure_quantity": {
+                    "type": "string"
+                },
+                "appointment_TW_start": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "appointment_TW_end": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "register": {
+            "type": "object",
+            "required": [
+                "user_id",
+                "password",
+                "first_name",
+                "last_name",
+                "email",
+                "activeFlag",
+                "userName",
+                "userClientId",
+                "phoneNum",
+                "userTerminalId"
+            ],
+            "properties": {
+                "user_id": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "activeFlag": {
+                    "type": "string"
+                },
+                "userName": {
+                    "type": "string"
+                },
+                "userClientId": {
+                    "type": "string"
+                },
+                "phoneNum": {
+                    "type": "string"
+                },
+                "userTerminalId": {
+                    "type": "string"
+                }
+            }
+        },
+        "update": {
+            "type": "object",
+            "required": [
+                "user_id",
+                "password",
+                "first_name",
+                "last_name",
+                "email",
+                "activeFlag",
+                "userName",
+                "userClientId",
+                "phoneNum",
+                "userTerminalId"
+            ],
+            "properties": {
+                "user_id": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "activeFlag": {
+                    "type": "string"
+                },
+                "userName": {
+                    "type": "string"
+                },
+                "userClientId": {
+                    "type": "string"
+                },
+                "phoneNum": {
+                    "type": "string"
+                },
+                "userTerminalId": {
+                    "type": "string"
+                }
+            }
+        },
+        "login": {
+            "type": "object",
+            "required": [
+                "userId",
+                "password"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
