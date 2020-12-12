@@ -1,9 +1,9 @@
-/* var app = require('../app');
-var cfg = require('config');
-var chai = require('chai');
-var chaiHttp = require('chai-http');
+const app = require('../app');
+const cfg = require('config');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
 let should = chai.should();
-var tcfg = require('../config/test.json');
+const tcfg = require('../config/test.json');
 
 chai.use(chaiHttp);
 describe('Test for Settings list Mocha `Testing', () => {
@@ -32,4 +32,3 @@ describe('Test for Settings list Mocha `Testing', () => {
             });
     });
 });
- */
